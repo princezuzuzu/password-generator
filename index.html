@@ -299,7 +299,7 @@
     if (state.Upper)  { charset += UPPER; guaranteed.push(UPPER[rand(UPPER.length)]); }
     if (state.Lower)  { charset += LOWER; guaranteed.push(LOWER[rand(LOWER.length)]); }
     if (state.Number) { charset += NUMS;  guaranteed.push(NUMS[rand(NUMS.length)]); }
-    if (state.Symbol) { charset += SYMS;  guaranteed.push(SYMS[rand(SYMS.length)]); }
+    if (state.Symbol) { guaranteed.push(SYMS[rand(SYMS.length)]); }
     const arr = new Uint32Array(len);
     crypto.getRandomValues(arr);
     let pw = [...guaranteed];
